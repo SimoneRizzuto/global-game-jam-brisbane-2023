@@ -12,22 +12,18 @@ public class Planter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        Interact();
-    }
+
 
     public void Interact()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (Seed == null) Plant(TestSeed);
-            else Talk();
-        }
+
+        if (Seed == null) Plant(TestSeed);
+        else Talk();
+
     }
 
     void Plant(Seed seed)
