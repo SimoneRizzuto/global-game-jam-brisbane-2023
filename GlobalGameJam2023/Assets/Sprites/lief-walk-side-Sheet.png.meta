@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 477540dea1a357a4cbe820321da1ae3f
+guid: 9714e1d8055f519419c3bac6ac115336
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lief-idle_0
+      name: lief-walk-side-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 10
-        height: 24
+        width: 11
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7894d099b3364f6459f4e6ca0aa49027
-      internalID: -140857903
+      spriteID: ab53fd3e19b78c94eb300db0df92243f
+      internalID: 1861419544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lief-idle_1
+      name: lief-walk-side-Sheet_1
       rect:
         serializedVersion: 2
-        x: 10
+        x: 11
         y: 0
-        width: 10
-        height: 24
+        width: 11
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef00e3ed0456d10488d35afa8bd8d9e8
-      internalID: 775006486
+      spriteID: f31f7991f385b8c47bca9445e6c553e6
+      internalID: 1467778113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lief-idle_2
+      name: lief-walk-side-Sheet_2
       rect:
         serializedVersion: 2
-        x: 20
+        x: 22
         y: 0
-        width: 10
-        height: 24
+        width: 11
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,8 +161,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 825d9eae2fdf21d458def23ec424c54e
-      internalID: -1484769529
+      spriteID: 4380b75ede029bc45b8ba18d68718ec6
+      internalID: -680152058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lief-walk-side-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 11
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e9e2552d6d5d24fbaf59258a073693
+      internalID: 1822678301
       vertices: []
       indices: 
       edges: []
@@ -178,9 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lief-idle_2: -1484769529
-      lief-idle_0: -140857903
-      lief-idle_1: 775006486
+      lief-walk-side-Sheet_3: 1822678301
+      lief-walk-side-Sheet_1: 1467778113
+      lief-walk-side-Sheet_0: 1861419544
+      lief-walk-side-Sheet_2: -680152058
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
