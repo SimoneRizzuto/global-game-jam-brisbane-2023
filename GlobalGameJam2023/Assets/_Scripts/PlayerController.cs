@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour
     PlayerInput playerInput;
     InputActions playerInputActions;
     Animator playerAnimator;
-    int facing = 3; // for default - down
-    bool isNearPlanter = false;
 
+    int facing = 3; // for default - down
+
+    bool isNearPlanter = false;
     Planter nearestPlanter; 
 
     private void Awake()
@@ -28,22 +29,18 @@ public class PlayerController : MonoBehaviour
     private void Interact_performed(InputAction.CallbackContext obj)
     {
         if (isNearPlanter && nearestPlanter != null)
-            nearestPlanter.Interact();
-       
-
+            nearestPlanter.Interact();       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isNearPlanter =true;
-
         nearestPlanter = collision.GetComponent<Planter>();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isNearPlanter =false;
-
         nearestPlanter = null;
     }
 
