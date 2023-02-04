@@ -27,7 +27,7 @@ public class Planter : MonoBehaviour
         // Display or hide watered speech if already watered
         else if (IsWatered) 
         {
-            if (UIManager.Instance.IsDisplayed) UIManager.Instance.DisplaySpeech(Seed.WateredText);
+            if (UIManager.Instance.IsDisplayed == false) UIManager.Instance.DisplaySpeech(Seed.WateredText);
             else UIManager.Instance.HideSpeech();
         }
 
