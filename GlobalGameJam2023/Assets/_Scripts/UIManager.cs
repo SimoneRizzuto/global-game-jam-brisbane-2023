@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     // UI Elements
     public GameObject SpeechTextBox;
     public TMP_Text SpeechText;
+    public Animator FadeTransitionAnimator;
 
     public bool IsDisplayed {get; private set;}
 
@@ -24,8 +25,6 @@ public class UIManager : MonoBehaviour
         }
 
         Instance = this;
-
-
     }
 
     private void Start()
