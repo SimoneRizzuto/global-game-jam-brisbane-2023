@@ -6,5 +6,7 @@ using UnityEngine;
 public class Seed : ScriptableObject
 {
     public string Name;
-    public string[] SpeechText;
+    public string WateredText;
+
+    public string[] Day1, Day2, Day3, Day4, Day5, Day6, Day7;
 }
