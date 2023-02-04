@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     public GameObject SpeechTextBox;
     public TMP_Text SpeechText;
 
+    public bool IsDisplayed {get; private set;}
+
     public void Awake()
     {
         // Singleton setup
@@ -24,14 +26,21 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        IsDisplayed = false;
+    }
+
     public void DisplaySpeech(string content)
     {
         SpeechText.text = content;
         SpeechTextBox.SetActive(true);
+        IsDisplayed = true;
     }
 
     public void HideSpeech()
     {
         SpeechTextBox.SetActive(false);
+        IsDisplayed = false;
     }
 }

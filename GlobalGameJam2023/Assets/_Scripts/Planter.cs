@@ -21,8 +21,17 @@ public class Planter : MonoBehaviour
 
     public void Interact()
     {
+        // Plant seed if none in planter
         if (Seed == null) Plant(TestSeed);
-        //else Water();
+
+        // Display or hide watered speech if already watered
+        else if (IsWatered) 
+        {
+            if (UIManager.Instance.IsDisplayed) UIManager.Instance.DisplaySpeech(Seed.WateredText);
+            else UIManager.Instance.HideSpeech();
+        }
+
+        // Display or hide normal speech if not watered
         else Talk();
     }
 
@@ -30,20 +39,6 @@ public class Planter : MonoBehaviour
     {
         Seed = seed;
         SpeechIndex = 0;
-    }
-    
-    // unsure how to incorporate watered text
-    void Water()
-    {
-        // Not watered
-        if (!IsWatered)
-        {
-            IsWatered = true;
-            Talk();
-        }
-
-        // Already watered
-        UIManager.Instance.DisplaySpeech(Seed.WateredText);
     }
 
     void Talk()
@@ -87,7 +82,11 @@ public class Planter : MonoBehaviour
         }
 
         // Display or hide speech
-        if (isDoneTalking) UIManager.Instance.HideSpeech();
+        if (isDoneTalking)
+        {
+            UIManager.Instance.HideSpeech();
+            IsWatered = true;
+        }
         else
         {
             UIManager.Instance.DisplaySpeech(speech);
