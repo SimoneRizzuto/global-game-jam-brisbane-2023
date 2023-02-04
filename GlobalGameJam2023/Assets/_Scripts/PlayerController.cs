@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     bool isNearSeed = false;
     DropSeed nearestSeed;
 
+    bool _isNearTeleSpot = false;
+    TeleSpot _nearestTeleSpot;
+
+
     [SerializeField]
     Planter[] planters;
 
@@ -65,6 +69,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isNearPlanter && nearestPlanter != null)
             nearestPlanter.Interact();
+
         if (isNearSeed && nearestSeed != null)
         {
             if(CurrentDay == nearestSeed.ActivationDay && HintKnow)
@@ -75,6 +80,8 @@ public class PlayerController : MonoBehaviour
             }
           
         }
+
+        if (_isNearTeleSpot && _nearestTeleSpot != null) _nearestTeleSpot.StartTeleport();
     }
     void GoToNextDay() //activate near bed
     {
@@ -101,6 +108,7 @@ public class PlayerController : MonoBehaviour
             isNearPlanter = true;
             nearestPlanter = collision.GetComponent<Planter>();
         }
+
         else if (collision.gameObject.CompareTag("DroppedSeed"))
         {          
             isNearSeed = true;
@@ -113,6 +121,11 @@ public class PlayerController : MonoBehaviour
             // show icon here for seed
         }
 
+        else if (collision.gameObject.CompareTag("TeleSpot"))
+        {
+            _isNearTeleSpot = true;
+            _nearestTeleSpot = collision.GetComponent<TeleSpot>();
+        }
     }
 
 
@@ -123,6 +136,9 @@ public class PlayerController : MonoBehaviour
 
         isNearSeed = false;
         nearestSeed = null;
+
+        _isNearTeleSpot = false;
+        _nearestTeleSpot = null;
 
         interactIcon.SetActive(false);
     }
@@ -150,9 +166,10 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetFloat("horizontal", dir.x);
         playerAnimator.SetFloat("vertical", dir.y);
         playerAnimator.SetInteger("direction", facing);
+    }
 
+    public void Teleport(Vector3 destination)
+    {
+        gameObject.transform.position = destination;
     }
 }
-
-
-
