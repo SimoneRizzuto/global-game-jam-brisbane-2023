@@ -352,7 +352,7 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 715859850}
   - component: {fileID: 715859853}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Planter
   m_TagString: Planter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,8 +645,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seed: {fileID: 0}
-  SpeechIndex: 0
   TestSeed: {fileID: 11400000, guid: 3e5f47fc4a885ff4a8b9ba22d11958b7, type: 2}
+  SpeechIndex: 0
+  IsWatered: 0
+  DaysOld: 0
 --- !u!1 &1692852314
 GameObject:
   m_ObjectHideFlags: 0
