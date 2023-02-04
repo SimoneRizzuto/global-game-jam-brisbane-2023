@@ -3128,6 +3128,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e7309225858c040bb696d1b1c187ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planters:
+  - {fileID: 715859853}
+  - {fileID: 974303815}
+  - {fileID: 379523024}
+  - {fileID: 797549108}
+  - {fileID: 1421179642}
+  - {fileID: 279252006}
   interactIcon: {fileID: 580459898}
 --- !u!114 &2011674504
 MonoBehaviour:

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8198d25c1c78041a5b61fe1b0fbb32, type: 3}
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
+  StartDay: 3
   Name: 
   WateredText: 
   Day1: []
@@ -39,3 +40,4 @@ MonoBehaviour:
   - "With her help and from Corn\u2019s help they saved me from a pretty sticky situation"
   - "But she was family to me which makes you family and I\u2019ll always take care
     of you"
+  finalImage: {fileID: 0}

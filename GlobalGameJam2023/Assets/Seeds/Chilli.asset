@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8198d25c1c78041a5b61fe1b0fbb32, type: 3}
   m_Name: Chilli
   m_EditorClassIdentifier: 
+  StartDay: 2
   Name: 
   WateredText: 
   Day1: []
@@ -38,3 +39,4 @@ MonoBehaviour:
   Day7:
   - "He told you his name didn\u2019t he huh the absolute \u2018cono\u2019 he was
     never this way with grandma, she always made him talk"
+  finalImage: {fileID: 0}

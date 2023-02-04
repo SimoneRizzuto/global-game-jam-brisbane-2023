@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8198d25c1c78041a5b61fe1b0fbb32, type: 3}
   m_Name: Mushroom
   m_EditorClassIdentifier: 
+  StartDay: 6
   Name: 
   WateredText: 
   Day1: []
@@ -25,3 +26,4 @@ MonoBehaviour:
   Day7:
   - "I you are as nice to me as your grandma was Leif when I rule to the world I\u2019ll
     make sure your safe and taken care of"
+  finalImage: {fileID: 0}

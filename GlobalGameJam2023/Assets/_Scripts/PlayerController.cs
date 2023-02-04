@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.PlayerLoop;
 using UnityEngine.U2D;
 
 public class PlayerController : MonoBehaviour
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviour
     bool isNearSeed = false;
     DropSeed nearestSeed;
 
+    [SerializeField]
+    Planter[] planters;
 
 
     //corn = 1
@@ -65,6 +68,21 @@ public class PlayerController : MonoBehaviour
             nearestSeed.gameObject.SetActive(false);
         }
     }
+    void GoToNextDay() //activate near bed
+    {
+        foreach (var planter in planters)
+        {
+            if (!planter.AreTasksFinished)
+            {
+                Debug.Log("Tasks Left to do! Cannot proceed!");
+                return;
+            }
+        }
+        foreach (var planter in planters)
+        {
+            planter.NextDay();
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -74,9 +92,7 @@ public class PlayerController : MonoBehaviour
             nearestPlanter = collision.GetComponent<Planter>();
         }
         else if (collision.gameObject.CompareTag("DroppedSeed"))
-        {
-           
-
+        {          
             isNearSeed = true;
             nearestSeed = collision.GetComponent<DropSeed>();
             if (!nearestSeed.IsHidden)
@@ -101,6 +117,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Move();
+        if (Input.GetKeyDown(KeyCode.Space)) GoToNextDay();
     }
 
     void Move()

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8198d25c1c78041a5b61fe1b0fbb32, type: 3}
   m_Name: Potato
   m_EditorClassIdentifier: 
+  StartDay: 5
   Name: 
   WateredText: 
   Day1: []
@@ -32,3 +33,4 @@ MonoBehaviour:
   Day7:
   - "Tomato and I\u2019s da died when we were young, although she thinks he died
     in a kitchen accident he was actually a drunk who fell down a well"
+  finalImage: {fileID: 0}

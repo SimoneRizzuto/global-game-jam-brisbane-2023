@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8198d25c1c78041a5b61fe1b0fbb32, type: 3}
   m_Name: Tomato
   m_EditorClassIdentifier: 
+  StartDay: 4
   Name: 
   WateredText: 
   Day1: []
@@ -33,3 +34,4 @@ MonoBehaviour:
   Day7:
   - When Tomato and I lost our mum, Grandma took us in sooooo quickly with no hesitation,
     I miss her sometimes
+  finalImage: {fileID: 0}

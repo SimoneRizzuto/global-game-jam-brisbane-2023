@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8198d25c1c78041a5b61fe1b0fbb32, type: 3}
   m_Name: Corn
   m_EditorClassIdentifier: 
+  StartDay: 1
   Name: Corn
   WateredText: Shit boi i aint thirsty
   Day1:

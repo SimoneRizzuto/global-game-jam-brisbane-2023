@@ -24,8 +24,10 @@ public class Planter : MonoBehaviour
     Sprite planterWithSeed;
     SpriteRenderer renderer;
 
-    bool finishedTask = false;
+    bool areTasksFinished = false;
     PlayerController player;
+
+    public bool AreTasksFinished { get => areTasksFinished; }
 
     private void Awake()
     {
@@ -41,21 +43,15 @@ public class Planter : MonoBehaviour
         SpeechIndex = 0;
         DaysOld++;
         IsWatered = false;
-
-        finishedTask = false;
-
+        areTasksFinished = false;
         ShowInteractIcon();
 
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space)) { NextDay();  }
-    }
     public void Interact()
     {
         // Plant seed if none in planter
-        if (Seed == null && (player.CurrentPossessedSeeds & seedCode) != 0) { Plant(DesignatedSeed); renderer.sprite = planterWithSeed; finishedTask = true; }
+        if (Seed == null && (player.CurrentPossessedSeeds & seedCode) != 0) { Plant(DesignatedSeed); renderer.sprite = planterWithSeed; areTasksFinished = true; }
 
         // Display or hide watered speech if already watered
         else if (IsWatered)
@@ -150,7 +146,7 @@ public class Planter : MonoBehaviour
         if (isDoneTalking)
         {
             UIManager.Instance.HideSpeech();
-            finishedTask = true;
+            areTasksFinished = true;
             IsWatered = true;
         }
         else
