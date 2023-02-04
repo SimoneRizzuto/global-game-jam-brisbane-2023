@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private void Interact_performed(InputAction.CallbackContext obj)
     {
+        Debug.Log(obj);
         if (isNearPlanter && nearestPlanter != null)
             nearestPlanter.Interact();       
     }
