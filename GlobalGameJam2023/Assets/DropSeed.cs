@@ -10,6 +10,7 @@ public class DropSeed : MonoBehaviour
 
     [SerializeField] Planter planter;
 
+    public bool IsHidden = false;
     public void ActivateIcon()
     {
         planter.ShowInteractIcon();

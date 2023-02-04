@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.U2D;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,13 +21,19 @@ public class PlayerController : MonoBehaviour
     DropSeed nearestSeed;
 
 
-    // corn == 1
-    // chilli == 2;
-    // potato == 4;
+
+    //corn = 1
+    //chilli = 2
+    //pumpkin = 4
+    //tomato = 8
+    //potato = 16
+    //mushroom = 32
 
 
 
     int currentPossessedSeeds = 0;
+
+    [SerializeField] GameObject interactIcon;
 
     public int CurrentPossessedSeeds
     {
@@ -68,13 +75,17 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("DroppedSeed"))
         {
+           
+
             isNearSeed = true;
             nearestSeed = collision.GetComponent<DropSeed>();
-
+            if (!nearestSeed.IsHidden)
+                interactIcon.SetActive(true);
             // show icon here for seed
         }
 
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -84,6 +95,7 @@ public class PlayerController : MonoBehaviour
         isNearSeed = false;
         nearestSeed = null;
 
+        interactIcon.SetActive(false);
     }
 
     private void Update()
