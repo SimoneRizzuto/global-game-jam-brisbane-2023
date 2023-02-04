@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     Planter[] planters;
 
+    int currentDay = 1;
 
     //corn = 1
     //chilli = 2
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
     //potato = 16
     //mushroom = 32
 
-
+    bool hintKnow = true;
 
     int currentPossessedSeeds = 0;
 
@@ -45,6 +46,9 @@ public class PlayerController : MonoBehaviour
             return currentPossessedSeeds;
         }
     }
+
+    public int CurrentDay { get => currentDay;  }
+    public bool HintKnow { get => hintKnow; set => hintKnow = value; }
 
     private void Awake()
     {
@@ -63,9 +67,13 @@ public class PlayerController : MonoBehaviour
             nearestPlanter.Interact();
         if (isNearSeed && nearestSeed != null)
         {
-            currentPossessedSeeds += nearestSeed.SeedCode;
-            nearestSeed.ActivateIcon();
-            nearestSeed.gameObject.SetActive(false);
+            if(CurrentDay == nearestSeed.ActivationDay && HintKnow)
+            {
+                currentPossessedSeeds += nearestSeed.SeedCode;
+                nearestSeed.ActivateIcon();
+                nearestSeed.gameObject.SetActive(false);
+            }
+          
         }
     }
     void GoToNextDay() //activate near bed
@@ -78,6 +86,8 @@ public class PlayerController : MonoBehaviour
                 return;
             }
         }
+        currentDay++;
+        HintKnow = false;
         foreach (var planter in planters)
         {
             planter.NextDay();
@@ -95,8 +105,11 @@ public class PlayerController : MonoBehaviour
         {          
             isNearSeed = true;
             nearestSeed = collision.GetComponent<DropSeed>();
-            if (!nearestSeed.IsHidden)
-                interactIcon.SetActive(true);
+            if (CurrentDay == nearestSeed.ActivationDay && HintKnow)
+            {
+                if (!nearestSeed.IsHidden)
+                    interactIcon.SetActive(true);
+            }
             // show icon here for seed
         }
 

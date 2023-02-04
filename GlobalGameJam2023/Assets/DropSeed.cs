@@ -7,7 +7,7 @@ public class DropSeed : MonoBehaviour
     //refer playercontroller for seedCode
     //edit in the editor
     public int SeedCode = 1;
-
+    public int ActivationDay = 0;
     [SerializeField] Planter planter;
 
     public bool IsHidden = false;

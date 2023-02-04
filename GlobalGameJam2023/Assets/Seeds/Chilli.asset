@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartDay: 2
   Name: 
-  WateredText: 
   Day1: []
   Day2:
   - Need water!!!
@@ -39,4 +38,4 @@ MonoBehaviour:
   Day7:
   - "He told you his name didn\u2019t he huh the absolute \u2018cono\u2019 he was
     never this way with grandma, she always made him talk"
-  finalImage: {fileID: 0}
+  finalImage: {fileID: 21300000, guid: 36e6970b84831434a9eac79abd03700b, type: 3}

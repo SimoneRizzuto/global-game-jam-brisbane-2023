@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeedCode: 32
+  ActivationDay: 6
   planter: {fileID: 279252006}
   IsHidden: 0
 --- !u!212 &105973964
@@ -353,7 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seed: {fileID: 0}
-  DesignatedSeed: {fileID: 11400000, guid: 3e5f47fc4a885ff4a8b9ba22d11958b7, type: 2}
+  DesignatedSeed: {fileID: 11400000, guid: 66629e94e20944e7aaa1558103bb9de1, type: 2}
   seedCode: 32
   SpeechIndex: 0
   IsWatered: 0
@@ -681,7 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seed: {fileID: 0}
-  DesignatedSeed: {fileID: 11400000, guid: 3e5f47fc4a885ff4a8b9ba22d11958b7, type: 2}
+  DesignatedSeed: {fileID: 11400000, guid: ae3f30784a5a34426a1bd10535935fca, type: 2}
   seedCode: 4
   SpeechIndex: 0
   IsWatered: 0
@@ -980,6 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeedCode: 16
+  ActivationDay: 5
   planter: {fileID: 1421179642}
   IsHidden: 0
 --- !u!212 &507267515
@@ -1508,6 +1510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeedCode: 8
+  ActivationDay: 4
   planter: {fileID: 797549108}
   IsHidden: 0
 --- !u!212 &674797665
@@ -1770,6 +1773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeedCode: 2
+  ActivationDay: 2
   planter: {fileID: 974303815}
   IsHidden: 0
 --- !u!212 &776409925
@@ -1881,7 +1885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seed: {fileID: 0}
-  DesignatedSeed: {fileID: 11400000, guid: 3e5f47fc4a885ff4a8b9ba22d11958b7, type: 2}
+  DesignatedSeed: {fileID: 11400000, guid: 4fab0d9d169fd40de971c935c34005d3, type: 2}
   seedCode: 8
   SpeechIndex: 0
   IsWatered: 0
@@ -2087,7 +2091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seed: {fileID: 0}
-  DesignatedSeed: {fileID: 11400000, guid: 3e5f47fc4a885ff4a8b9ba22d11958b7, type: 2}
+  DesignatedSeed: {fileID: 11400000, guid: 9c44537095810443399f2bfb077f568d, type: 2}
   seedCode: 2
   SpeechIndex: 0
   IsWatered: 0
@@ -2253,6 +2257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeedCode: 4
+  ActivationDay: 3
   planter: {fileID: 379523024}
   IsHidden: 0
 --- !u!212 &1134507511
@@ -2529,7 +2534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seed: {fileID: 0}
-  DesignatedSeed: {fileID: 11400000, guid: 3e5f47fc4a885ff4a8b9ba22d11958b7, type: 2}
+  DesignatedSeed: {fileID: 11400000, guid: 00a5559255d2444a7aec2161ca1f5f80, type: 2}
   seedCode: 16
   SpeechIndex: 0
   IsWatered: 0
@@ -2690,8 +2695,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeedCode: 1
+  ActivationDay: 1
   planter: {fileID: 715859853}
-  IsHidden: 1
+  IsHidden: 0
 --- !u!212 &1445543770
 SpriteRenderer:
   m_ObjectHideFlags: 0
