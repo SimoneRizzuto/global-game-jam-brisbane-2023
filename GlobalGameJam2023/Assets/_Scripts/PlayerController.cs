@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
     int facing = 3; // for default - down
 
     bool isNearPlanter = false;
-    Planter nearestPlanter; 
+    Planter nearestPlanter;
+
+ 
 
     private void Awake()
     {
@@ -28,7 +30,6 @@ public class PlayerController : MonoBehaviour
 
     private void Interact_performed(InputAction.CallbackContext obj)
     {
-        Debug.Log(obj);
         if (isNearPlanter && nearestPlanter != null)
             nearestPlanter.Interact();       
     }
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour
     {
         isNearPlanter =true;
         nearestPlanter = collision.GetComponent<Planter>();
+        if (nearestPlanter != null)
+            nearestPlanter.ShowInteractIcon();
     }
 
     private void OnTriggerExit2D(Collider2D collision)

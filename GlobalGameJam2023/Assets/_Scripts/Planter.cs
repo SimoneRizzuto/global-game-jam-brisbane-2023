@@ -13,19 +13,35 @@ public class Planter : MonoBehaviour
 
     public int DaysOld = 0;
 
+    [SerializeField]
+    GameObject seedIcon, waterIcon;
+
+
+    private void Awake()
+    {
+        ShowInteractIcon();
+    }
     public void NextDay()
     {
         SpeechIndex = 0;
         DaysOld++;
+        IsWatered = false;
+
+        ShowInteractIcon();
+
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space)) { NextDay(); }
+    }
     public void Interact()
     {
         // Plant seed if none in planter
-        if (Seed == null) Plant(TestSeed);
+        if (Seed == null) { Plant(TestSeed); }
 
         // Display or hide watered speech if already watered
-        else if (IsWatered) 
+        else if (IsWatered)
         {
             if (UIManager.Instance.IsDisplayed == false) UIManager.Instance.DisplaySpeech(Seed.WateredText);
             else UIManager.Instance.HideSpeech();
@@ -33,6 +49,38 @@ public class Planter : MonoBehaviour
 
         // Display or hide normal speech if not watered
         else Talk();
+
+        ShowInteractIcon();
+    }
+
+    public void ShowInteractIcon()
+    {
+        
+        if (Seed == null)
+        {
+            waterIcon.SetActive(false);
+            seedIcon.SetActive(true);
+        }
+        else if (IsWatered)
+        {
+            waterIcon.SetActive(false);
+            seedIcon.SetActive(false);
+        }
+        else 
+        {
+            if (DaysOld != 0)
+            {
+                waterIcon.SetActive(true);
+                seedIcon.SetActive(false);
+            }
+            else
+            {
+                waterIcon.SetActive(false);
+                seedIcon.SetActive(false);
+            }
+        }
+
+
     }
 
     void Plant(Seed seed)
@@ -48,31 +96,31 @@ public class Planter : MonoBehaviour
         bool isDoneTalking = false;
         switch (DaysOld)
         {
-            case 0:
+            case 1:
                 if (SpeechIndex == Seed.Day1.Length) isDoneTalking = true;
                 else speech = Seed.Day1[SpeechIndex];
                 break;
-            case 1:
+            case 2:
                 if (SpeechIndex == Seed.Day2.Length) isDoneTalking = true;
                 else speech = Seed.Day2[SpeechIndex];
                 break;
-            case 2:
+            case 3:
                 if (SpeechIndex == Seed.Day3.Length) isDoneTalking = true;
                 else speech = Seed.Day3[SpeechIndex];
                 break;
-            case 3:
+            case 4:
                 if (SpeechIndex == Seed.Day4.Length) isDoneTalking = true;
                 else speech = Seed.Day4[SpeechIndex];
                 break;
-            case 4:
+            case 5:
                 if (SpeechIndex == Seed.Day5.Length) isDoneTalking = true;
                 else speech = Seed.Day5[SpeechIndex];
                 break;
-            case 5:
+            case 6:
                 if (SpeechIndex == Seed.Day6.Length) isDoneTalking = true;
                 else speech = Seed.Day6[SpeechIndex];
                 break;
-            case 6:
+            case 7:
                 if (SpeechIndex == Seed.Day7.Length) isDoneTalking = true;
                 else speech = Seed.Day7[SpeechIndex];
                 break;
@@ -80,7 +128,7 @@ public class Planter : MonoBehaviour
                 speech = "Day not found oopsies";
                 break;
         }
-
+        if (DaysOld == 0) { return; }
         // Display or hide speech
         if (isDoneTalking)
         {
