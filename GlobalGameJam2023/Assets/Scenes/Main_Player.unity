@@ -532,7 +532,6 @@ GameObject:
   - component: {fileID: 715859851}
   - component: {fileID: 715859850}
   - component: {fileID: 715859853}
-  - component: {fileID: 715859854}
   m_Layer: 0
   m_Name: Planter
   m_TagString: Planter
@@ -652,22 +651,13 @@ MonoBehaviour:
   SpeechIndex: 0
   IsWatered: 0
   DaysOld: 0
-  seedIcon: {fileID: 0}
-  waterIcon: {fileID: 0}
---- !u!114 &715859854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  seedIcon: {fileID: 970837453}
+  waterIcon: {fileID: 979014106}
+--- !u!1 &970837453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1530431254100737656, guid: 1bc9eba99cb528d42bee3d54e1e783ce, type: 3}
+  m_PrefabInstance: {fileID: 1715345907}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715859849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be91198da47b7fd499772cf9a69380c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waterIcon: {fileID: 5222527358453208557, guid: ed4c769ea45b73d48a2c4a85de790099, type: 3}
-  seedIcon: {fileID: 1530431254100737656, guid: 1bc9eba99cb528d42bee3d54e1e783ce, type: 3}
 --- !u!1001 &971116685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -732,6 +722,11 @@ PrefabInstance:
 --- !u!4 &971116686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5222527358453208558, guid: ed4c769ea45b73d48a2c4a85de790099, type: 3}
+  m_PrefabInstance: {fileID: 971116685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &979014106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5222527358453208557, guid: ed4c769ea45b73d48a2c4a85de790099, type: 3}
   m_PrefabInstance: {fileID: 971116685}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1692852314
