@@ -44,3 +44,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: House
+    uniqueID: 1392504657
+    locked: 0
+  - name: Others
+    uniqueID: 3598432441
+    locked: 0
+  - name: Shadow
+    uniqueID: 75215751
+    locked: 0
+  - name: Bed
+    uniqueID: 915084933
+    locked: 0
+  - name: Player
+    uniqueID: 3122383683
+    locked: 0
+  - name: Icons
+    uniqueID: 234405665
+    locked: 0
