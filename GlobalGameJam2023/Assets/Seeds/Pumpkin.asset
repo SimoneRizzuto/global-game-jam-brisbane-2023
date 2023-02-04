@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartDay: 3
   Name: 
-  WateredText: 
   Day1: []
   Day2: []
   Day3:
@@ -40,4 +39,4 @@ MonoBehaviour:
   - "With her help and from Corn\u2019s help they saved me from a pretty sticky situation"
   - "But she was family to me which makes you family and I\u2019ll always take care
     of you"
-  finalImage: {fileID: 0}
+  finalImage: {fileID: 21300000, guid: 36e6970b84831434a9eac79abd03700b, type: 3}
