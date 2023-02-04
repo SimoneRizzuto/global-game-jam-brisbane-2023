@@ -24,6 +24,8 @@ public class UIManager : MonoBehaviour
         }
 
         Instance = this;
+
+
     }
 
     private void Start()

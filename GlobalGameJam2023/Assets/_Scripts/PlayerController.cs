@@ -16,14 +16,33 @@ public class PlayerController : MonoBehaviour
     bool isNearPlanter = false;
     Planter nearestPlanter;
 
- 
+    bool isNearSeed = false;
+    DropSeed nearestSeed;
+
+
+    // corn == 1
+    // chilli == 2;
+    // potato == 4;
+
+
+
+    int currentPossessedSeeds = 0;
+
+    public int CurrentPossessedSeeds
+    {
+        get
+        {
+            return currentPossessedSeeds;
+        }
+    }
 
     private void Awake()
     {
+
         playerInput = GetComponent<PlayerInput>();
         playerInputActions = new InputActions();
         playerInputActions.Player.Enable();
-        playerAnimator= GetComponent<Animator>();
+        playerAnimator = GetComponent<Animator>();
 
         playerInputActions.Player.Interact.performed += Interact_performed; ;
     }
@@ -31,32 +50,51 @@ public class PlayerController : MonoBehaviour
     private void Interact_performed(InputAction.CallbackContext obj)
     {
         if (isNearPlanter && nearestPlanter != null)
-            nearestPlanter.Interact();       
+            nearestPlanter.Interact();
+        if (isNearSeed && nearestSeed != null)
+        {
+            currentPossessedSeeds += nearestSeed.SeedCode;
+            nearestSeed.ActivateIcon();
+            nearestSeed.gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isNearPlanter =true;
-        nearestPlanter = collision.GetComponent<Planter>();
-        if (nearestPlanter != null)
-            nearestPlanter.ShowInteractIcon();
+        if (collision.gameObject.CompareTag("Planter"))
+        {
+            isNearPlanter = true;
+            nearestPlanter = collision.GetComponent<Planter>();
+        }
+        else if (collision.gameObject.CompareTag("DroppedSeed"))
+        {
+            isNearSeed = true;
+            nearestSeed = collision.GetComponent<DropSeed>();
+
+            // show icon here for seed
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isNearPlanter =false;
+        isNearPlanter = false;
         nearestPlanter = null;
+
+        isNearSeed = false;
+        nearestSeed = null;
+
     }
 
     private void Update()
     {
         Move();
     }
-   
+
     void Move()
     {
         Vector2 dir = playerInputActions.Player.Move.ReadValue<Vector2>();
-        transform.position +=  (Vector3)dir * Time.deltaTime;
+        transform.position += (Vector3)dir * Time.deltaTime;
 
         if (dir.x < 0)
             facing = 0;
@@ -69,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
         playerAnimator.SetFloat("horizontal", dir.x);
         playerAnimator.SetFloat("vertical", dir.y);
-        playerAnimator.SetInteger("direction", facing) ;
+        playerAnimator.SetInteger("direction", facing);
 
     }
 }
