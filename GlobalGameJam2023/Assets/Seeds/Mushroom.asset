@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8198d25c1c78041a5b61fe1b0fbb32, type: 3}
+  m_Name: Mushroom
+  m_EditorClassIdentifier: 
+  Name: 
+  WateredText: 
+  Day1: []
+  Day2: []
+  Day3: []
+  Day4: []
+  Day5: []
+  Day6:
+  - You all would bow to meeeee and under my rule you all will know how much of a
+    fungi that I am
+  Day7:
+  - "I you are as nice to me as your grandma was Leif when I rule to the world I\u2019ll
+    make sure your safe and taken care of"

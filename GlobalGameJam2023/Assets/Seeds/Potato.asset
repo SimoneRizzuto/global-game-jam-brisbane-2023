@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8198d25c1c78041a5b61fe1b0fbb32, type: 3}
+  m_Name: Potato
+  m_EditorClassIdentifier: 
+  Name: 
+  WateredText: 
+  Day1: []
+  Day2: []
+  Day3: []
+  Day4: []
+  Day5:
+  - I see you have met my little sister, has she annoyed you enough yet
+  - "But she\u2019s a good kid, a bit too high energy for me at times though. She
+    takes a lot of her personality from our uncle."
+  - "I don\u2019t think she told you where we\u2019re from but we were actually from
+    two different places as Tomato is from Spain and I am from Ireland"
+  Day6:
+  - "I see you have met our uncle, he\u2019s a bit fiery but he\u2019s always been
+    there for use although sometimes he\u2019s too hot for us"
+  - "Yeah chilli is great but I know you\u2019re wondering that we\u2019re not from
+    south America we\u2019re from Europe, he gets his Chilean descent from his mother"
+  Day7:
+  - "Tomato and I\u2019s da died when we were young, although she thinks he died
+    in a kitchen accident he was actually a drunk who fell down a well"

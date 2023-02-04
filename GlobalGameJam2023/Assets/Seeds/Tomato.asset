@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8198d25c1c78041a5b61fe1b0fbb32, type: 3}
+  m_Name: Tomato
+  m_EditorClassIdentifier: 
+  Name: 
+  WateredText: 
+  Day1: []
+  Day2: []
+  Day3: []
+  Day4:
+  - sniffles*
+  - "h\u2026 have\u2026 have you seen my brother"
+  - "He\u2019s usually s\u2026 seen in the ground, we\u2019re usually always together
+    so he must be hiding from me"
+  - "Can you please find him, he\u2019s always better at hide and seek than me"
+  Day5:
+  - "Potatoooooo, you finally woke up, I\u2019m getting bored our new friend isn\u2019t
+    too chatty"
+  - "She\u2019s nice but I can\u2019t remember her name, tree, spinach, maple?, hmmm"
+  Day6:
+  - "Your name was Leif wasn\u2019t it, Tomato was telling me because he said that
+    I was annoying you by saying the wrong name, am I annoying you?"
+  Day7:
+  - When Tomato and I lost our mum, Grandma took us in sooooo quickly with no hesitation,
+    I miss her sometimes

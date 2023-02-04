@@ -5,7 +5,11 @@ using UnityEngine;
 public class Planter : MonoBehaviour
 {
     public Seed Seed; // not set in editor
-    public Seed TestSeed; // for testing purposes
+
+    public Seed DesignatedSeed; // for testing purposes
+
+    public int seedCode = 1; //for corn is 1 ( see refer at playercontroller )
+
 
     public int SpeechIndex = 0; // starts at zero -- probs private?
 
@@ -16,16 +20,29 @@ public class Planter : MonoBehaviour
     [SerializeField]
     GameObject seedIcon, waterIcon;
 
+    [SerializeField]
+    Sprite planterWithSeed;
+    SpriteRenderer renderer;
+
+    bool finishedTask = false;
+    PlayerController player;
 
     private void Awake()
     {
+        player = FindObjectOfType<PlayerController>().GetComponent<PlayerController>();
+        renderer = GetComponent<SpriteRenderer>();
         ShowInteractIcon();
     }
+
     public void NextDay()
     {
+        
+        if(Seed != null) { renderer.sprite = Seed.finalImage; }
         SpeechIndex = 0;
         DaysOld++;
         IsWatered = false;
+
+        finishedTask = false;
 
         ShowInteractIcon();
 
@@ -33,17 +50,17 @@ public class Planter : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) { NextDay(); }
+        if(Input.GetKeyDown(KeyCode.Space)) { NextDay();  }
     }
     public void Interact()
     {
         // Plant seed if none in planter
-        if (Seed == null) { Plant(TestSeed); }
+        if (Seed == null && (player.CurrentPossessedSeeds & seedCode) != 0) { Plant(DesignatedSeed); renderer.sprite = planterWithSeed; finishedTask = true; }
 
         // Display or hide watered speech if already watered
         else if (IsWatered)
         {
-            if (UIManager.Instance.IsDisplayed == false) UIManager.Instance.DisplaySpeech(Seed.WateredText);
+            if (UIManager.Instance.IsDisplayed == false) { UIManager.Instance.DisplaySpeech(Seed.WateredText); }
             else UIManager.Instance.HideSpeech();
         }
 
@@ -56,7 +73,7 @@ public class Planter : MonoBehaviour
     public void ShowInteractIcon()
     {
         
-        if (Seed == null)
+        if (Seed == null && (player.CurrentPossessedSeeds & seedCode) != 0)
         {
             waterIcon.SetActive(false);
             seedIcon.SetActive(true);
@@ -133,6 +150,7 @@ public class Planter : MonoBehaviour
         if (isDoneTalking)
         {
             UIManager.Instance.HideSpeech();
+            finishedTask = true;
             IsWatered = true;
         }
         else
