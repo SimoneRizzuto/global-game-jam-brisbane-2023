@@ -45,21 +45,15 @@ public class PlayerController : MonoBehaviour
         nearestPlanter = null;
     }
 
-
     private void Update()
     {
         Move();
     }
    
-    
-
-
     void Move()
     {
         Vector2 dir = playerInputActions.Player.Move.ReadValue<Vector2>();
         transform.position +=  (Vector3)dir * Time.deltaTime;
-        //Debug.Log(dir);
-
 
         if (dir.x < 0)
             facing = 0;
