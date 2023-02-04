@@ -152,6 +152,9 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         Vector2 dir = playerInputActions.Player.Move.ReadValue<Vector2>();
+        if ( Mathf.Abs(dir.x) > 0.05 ) { dir.x = 1 * Mathf.Sign(dir.x); }
+        if (Mathf.Abs(dir.y) > 0.05) { dir.y = 1 * Mathf.Sign(dir.y); }
+
         transform.position += (Vector3)dir * Time.deltaTime;
 
         if (dir.x < 0)
