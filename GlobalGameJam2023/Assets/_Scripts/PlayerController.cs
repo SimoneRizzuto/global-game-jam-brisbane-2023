@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
         interactIcon.SetActive(false);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Move();
         if (Input.GetKeyDown(KeyCode.Space)) GoToNextDay();
@@ -152,7 +152,9 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         Vector2 dir = playerInputActions.Player.Move.ReadValue<Vector2>();
-        transform.position += (Vector3)dir * Time.deltaTime;
+        if ( Mathf.Abs(dir.x) > 0.05 ) { dir.x = 1 * Mathf.Sign(dir.x); }
+        if (Mathf.Abs(dir.y) > 0.05) { dir.y = 1 * Mathf.Sign(dir.y); }
+
 
         if (dir.x < 0)
             facing = 0;
@@ -166,6 +168,9 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetFloat("horizontal", dir.x);
         playerAnimator.SetFloat("vertical", dir.y);
         playerAnimator.SetInteger("direction", facing);
+
+        transform.position += ((Vector3)dir).normalized * Time.deltaTime;
+
     }
 
     public void Teleport(Vector3 destination)

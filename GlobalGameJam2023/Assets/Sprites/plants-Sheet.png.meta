@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b014a00b20302584db8737c6d28ee19f
+guid: d99ffa2768e3b2b4eb3d2846aeec39c5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,139 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: interaction-icons-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 36
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 435e3a002636474448b468bcc44a6673
-      internalID: -230584242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interaction-icons-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 36
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96c821a0dd4ccb042b814c7ee3cb90b2
-      internalID: -1691747284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interaction-icons-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 24
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0588b25d7058a94eaa60cd1449e0981
-      internalID: 1946146211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interaction-icons-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 24
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66a1e86740fa1684cb8b889632d77bbd
-      internalID: -83080155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interaction-icons-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 12
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8eba5de8b76b9f448925916c134b2e4
-      internalID: -442427294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interaction-icons-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 12
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebb08b9d6ef375243a937afd99ed075a
-      internalID: 552161950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interaction-icons-Sheet_6
+      name: plants-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 13
-        height: 12
+        width: 27
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,8 +119,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 068785d3cf7d6a2448de9a891f29d483
-      internalID: 171364409
+      spriteID: ed8d0a5a5e9f52c41ade23171097b6b5
+      internalID: 2013401903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plants-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487bd40455a08354ab573c8db912c48f
+      internalID: -1021147280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plants-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea867187bac4ec45b6a3ab866f3b6a7
+      internalID: -436584660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plants-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2ff9ac78bbe214f9d3d541b29d908a
+      internalID: -913877911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plants-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444a7cdce08a45a47aea62829c537524
+      internalID: -1513131304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plants-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153588f60df580c47b0ded08ace2db60
+      internalID: -1296451444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plants-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9f117801a64a44a9f87a5b0bb4c2d1
+      internalID: -1748617944
       vertices: []
       indices: 
       edges: []
@@ -262,13 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      interaction-icons-Sheet_1: -1691747284
-      interaction-icons-Sheet_5: 552161950
-      interaction-icons-Sheet_6: 171364409
-      interaction-icons-Sheet_2: 1946146211
-      interaction-icons-Sheet_0: -230584242
-      interaction-icons-Sheet_3: -83080155
-      interaction-icons-Sheet_4: -442427294
+      plants-Sheet_5: -1296451444
+      plants-Sheet_6: -1748617944
+      plants-Sheet_0: 2013401903
+      plants-Sheet_4: -1513131304
+      plants-Sheet_3: -913877911
+      plants-Sheet_2: -436584660
+      plants-Sheet_1: -1021147280
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
