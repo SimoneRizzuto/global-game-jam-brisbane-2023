@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartDay: 3
   Name: 
-  Day1: []
-  Day2: []
-  Day3:
+  Day1:
   - Hey there, thanks for the water Leif O, your Nonna told me all about you, but
     anyway you can call me O. Jack O.
   - "This is an interesting new crew you have me with here, like the man who laughs
@@ -26,20 +24,22 @@ MonoBehaviour:
     if you can get em to talk, you understand the world."
   - "I\u2019m gonna cut to the chase young Leif O, that next seed that you\u2019re
     lookin for I saw it sitting on a lantern somewhere."
-  Day4:
+  Day2:
   - "You know a melon is dumb when you split their head open and they\u2019re seedless.
     Right?"
-  Day5:
+  Day3:
   - "I heard Chilli complaining about me yesterday, but just between you and me,
     my last name is\u2026 O\u2019Lantern. Just don\u2019t tell anyone, capish?"
-  Day6:
+  Day4:
   - "You know kid you\u2019re smart, you can get away with anything."
   - Cause a fish with its mouth closed never gets caught.
-  Day7:
+  Day5:
   - Ya nonna was a wonderful lady, I hope you respect her as much as I do.
   - "With her and Corn\u2019s help, they saved me from a pretty sticky situation."
   - "But she was family to me, which makes you family, and I\u2019ll always take
     care of you."
   - "I\u2019m gonna cut to the chase young Leif O, that next seed that you\u2019re
     lookin for I saw it sitting on a lantern somewhere."
+  Day6: []
+  Day7: []
   finalImage: {fileID: 214017785, guid: 13d258679a0b54c48aa7d2552b1328e8, type: 3}

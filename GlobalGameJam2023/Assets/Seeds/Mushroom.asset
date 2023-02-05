@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartDay: 6
   Name: 
-  Day1: []
-  Day2: []
-  Day3: []
-  Day4: []
-  Day5: []
-  Day6:
+  Day1:
   - "Welcome to my throne room mwahahaha. This is where I\u2019ll rule the world.
     Where everyone will bow to meeee"
   - "I won\u2019t be like the dictators of the past. I\u2019ll show the world that
     I\u2019m really a fungi"
-  Day7:
+  Day2:
   - "I you are as nice to me as your grandma was Leif when I rule to the world I\u2019ll
     make sure your safe and taken care of. Even more so than I what Pumpkin said
     he will"
+  Day3: []
+  Day4: []
+  Day5: []
+  Day6: []
+  Day7: []
   finalImage: {fileID: 1646385652, guid: 13d258679a0b54c48aa7d2552b1328e8, type: 3}
