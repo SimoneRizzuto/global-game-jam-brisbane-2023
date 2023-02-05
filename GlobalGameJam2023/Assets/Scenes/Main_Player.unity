@@ -206,7 +206,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07779795, y: 0.005186513}
+  m_Offset: {x: 0.07779795, y: -0.006379038}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -217,7 +217,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25559592, y: 0.2133576}
+  m_Size: {x: 0.25559592, y: 0.039874375}
   m_EdgeRadius: 0
 --- !u!114 &50382678
 MonoBehaviour:
@@ -575,7 +575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &105973962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -618,6 +618,7 @@ MonoBehaviour:
   ActivationDay: 6
   planter: {fileID: 986586552}
   IsHidden: 0
+  seedName: Mushroom
 --- !u!212 &105973964
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1696,7 +1697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &507267513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1739,6 +1740,7 @@ MonoBehaviour:
   ActivationDay: 5
   planter: {fileID: 1671382355}
   IsHidden: 0
+  seedName: Potato
 --- !u!212 &507267515
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2410,7 +2412,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 674797666}
-  - component: {fileID: 674797665}
   - component: {fileID: 674797664}
   - component: {fileID: 674797663}
   m_Layer: 0
@@ -2419,7 +2420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &674797663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2462,58 +2463,7 @@ MonoBehaviour:
   ActivationDay: 4
   planter: {fileID: 1406863219}
   IsHidden: 0
---- !u!212 &674797665
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674797662}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -696534855
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 283b7d2397bec564a8ce70c73ca313ea, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  seedName: Tomato
 --- !u!4 &674797666
 Transform:
   m_ObjectHideFlags: 0
@@ -2873,7 +2823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &776409923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2916,6 +2866,7 @@ MonoBehaviour:
   ActivationDay: 2
   planter: {fileID: 1553669161}
   IsHidden: 1
+  seedName: Chilli
 --- !u!212 &776409925
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3339,8 +3290,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -696534855
-  m_SortingLayer: 2
+  m_SortingLayerID: 75215751
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 003fcdfd216ed6e469778b55aa9d7e3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3757,7 +3708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1134507509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3800,6 +3751,7 @@ MonoBehaviour:
   ActivationDay: 3
   planter: {fileID: 1144168212}
   IsHidden: 0
+  seedName: Pumpkin
 --- !u!212 &1134507511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5833,6 +5785,7 @@ MonoBehaviour:
   ActivationDay: 1
   planter: {fileID: 715859853}
   IsHidden: 0
+  seedName: Corn
 --- !u!212 &1445543770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7221,6 +7174,13 @@ MonoBehaviour:
   interactIcon: {fileID: 580459898}
   sleepIcon: {fileID: 5712913694087274033}
   caveCarpet: {fileID: 1364458645}
+  seedBags:
+  - {fileID: 1445543767}
+  - {fileID: 776409922}
+  - {fileID: 1134507508}
+  - {fileID: 674797662}
+  - {fileID: 507267512}
+  - {fileID: 105973961}
 --- !u!114 &2011674504
 MonoBehaviour:
   m_ObjectHideFlags: 0

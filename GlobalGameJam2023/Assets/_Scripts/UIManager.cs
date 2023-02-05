@@ -44,4 +44,6 @@ public class UIManager : MonoBehaviour
         SpeechTextBox.SetActive(false);
         IsDisplayed = false;
     }
+
+    
 }
