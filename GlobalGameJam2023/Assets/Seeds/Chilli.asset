@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartDay: 2
   Name: 
-  Day1: []
-  Day2:
+  Day1:
   - Need water!!!
   - Leif pours water onto chilli*
   - "Thanks for the water but now I\u2019m steaming that you put me next to corn
@@ -24,20 +23,21 @@ MonoBehaviour:
     my body resembles the shape of the country. Do you see it, amiga?."
   - "You think Corn\u2019s riddle was good. Take a shot at mine."
   - Find the area where plants existed before me.
-  Day3:
+  Day2:
   - "In my homeland my Papi is legendary for his spiciness. His nickname was \u2018Picante
     de Volcan\u2019. I will reach his legend someday."
-  Day4:
+  Day3:
   - "Wow! Jack O has such a estupido face. He thinks he\u2019s so cool having a single
     letter last name. It\u2019s like the opposite of Madonna"
-  Day5:
+  Day4:
   - You see steam coming off Chili*
   - Why did she leave without a goodbye!?
   - In my homeland, it is considered dishonourable to leave without saying goodbye!
-  Day6:
+  Day5:
   - "Ah you\u2019ve met my amazing niece and nephew, they\u2019re a bit polar opposites
     but they care for each other in their own sibling way."
-  Day7:
+  Day6:
   - "He told you his name, didn\u2019t he? The absolute \u2018cono\u2019, he was
     never this way with grandma, she always made him talk."
+  Day7: []
   finalImage: {fileID: -1443711910, guid: 13d258679a0b54c48aa7d2552b1328e8, type: 3}
