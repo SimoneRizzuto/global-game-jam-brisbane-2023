@@ -6,7 +6,7 @@ public class TeleSpot : MonoBehaviour
 {
     [SerializeField]
     GameObject[] cameras;
-
+    public AudioSource BGMusic;
     [SerializeField] GameObject activatedCamera;
 
     public GameObject Destination;
@@ -27,5 +27,17 @@ public class TeleSpot : MonoBehaviour
         GameManager.Instance.PlayerController.IsTeleporting = false;
         GameManager.Instance.PlayerController.Teleport(Destination.transform.position);
         UIManager.Instance.FadeTransitionAnimator.SetBool("IsFading", false);
+        StopAllAudio();
+        BGMusic.Play();
+    }
+    private AudioSource[] allAudioSources;
+
+    void StopAllAudio()
+    {
+        allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            audioS.Stop();
+        }
     }
 }
