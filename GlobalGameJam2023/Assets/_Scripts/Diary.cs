@@ -81,7 +81,7 @@ public class Diary : MonoBehaviour
         }
 
 
-        if (GameManager.Instance.PlayerController.CurrentDay - 1 != DaysOld) DaysOld = GameManager.Instance.PlayerController.CurrentDay -1;
+        if (GameManager.Instance.PlayerController.CurrentDay - 1 != DaysOld) DaysOld = GameManager.Instance.PlayerController.CurrentDay - 1;
 
         if (SpeechIndex < Entries[DaysOld].Count)
         {
@@ -92,6 +92,7 @@ public class Diary : MonoBehaviour
         }
         GameManager.Instance.PlayerController.IsTeleporting = false;
 
+        SpeechIndex = 0;
         UIManager.Instance.HideSpeech();
     }
 }
