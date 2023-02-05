@@ -140,7 +140,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96c821a0dd4ccb042b814c7ee3cb90b2
+      spriteID: 0c6bb25d6c1a4e2428eab85f18f45a99
       internalID: -1691747284
       vertices: []
       indices: 
@@ -161,7 +161,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0588b25d7058a94eaa60cd1449e0981
+      spriteID: a69860e5c3913ef4bb93f49369f5dda5
       internalID: 1946146211
       vertices: []
       indices: 
@@ -182,7 +182,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66a1e86740fa1684cb8b889632d77bbd
+      spriteID: d5d3e92d3d9d79e4ab71d2233b530ad8
       internalID: -83080155
       vertices: []
       indices: 
@@ -203,7 +203,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8eba5de8b76b9f448925916c134b2e4
+      spriteID: afb35a7c935934845b03f8e10b37a527
       internalID: -442427294
       vertices: []
       indices: 
@@ -224,7 +224,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebb08b9d6ef375243a937afd99ed075a
+      spriteID: 91faa64023bf9ee4c9c5a9458f0d7b6b
       internalID: 552161950
       vertices: []
       indices: 
@@ -245,8 +245,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 068785d3cf7d6a2448de9a891f29d483
+      spriteID: 3b3286d931f18ec47b08fc44e23e6905
       internalID: 171364409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interaction-icons-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c09836b57dca7042adfa818a63518c5
+      internalID: 1340750631
       vertices: []
       indices: 
       edges: []
@@ -267,6 +288,7 @@ TextureImporter:
       interaction-icons-Sheet_6: 171364409
       interaction-icons-Sheet_2: 1946146211
       interaction-icons-Sheet_0: -230584242
+      interaction-icons-Sheet_7: 1340750631
       interaction-icons-Sheet_3: -83080155
       interaction-icons-Sheet_4: -442427294
   spritePackingTag: 

@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     int currentPossessedSeeds = 0;
 
     [SerializeField] GameObject interactIcon;
+    [SerializeField] GameObject sleepIcon;
 
     public int CurrentPossessedSeeds
     {
@@ -81,7 +82,10 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-
+        if(sleepIcon.activeInHierarchy)
+        {
+            GoToNextDay();
+        }
         //if (_isNearTeleSpot && _nearestTeleSpot != null) _nearestTeleSpot.StartTeleport();
     }
     void GoToNextDay() //activate near bed
@@ -90,7 +94,8 @@ public class PlayerController : MonoBehaviour
         {
             if (!planter.AreTasksFinished)
             {
-                Debug.Log("Tasks Left to do! Cannot proceed!");
+                UIManager.Instance.DisplaySpeech("It is still early!");
+                StartCoroutine(HideSpeech(1.2f));
                 return;
             }
         }
@@ -100,6 +105,12 @@ public class PlayerController : MonoBehaviour
         {
             planter.NextDay();
         }
+    }
+
+    IEnumerator HideSpeech(float t)
+    {
+         yield return new WaitForSeconds(t);
+         UIManager.Instance.HideSpeech();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -119,6 +130,13 @@ public class PlayerController : MonoBehaviour
                 if (!nearestSeed.IsHidden)
                     interactIcon.SetActive(true);
             }
+            // show icon here for seed
+        }
+        else if (collision.gameObject.CompareTag("Bed"))
+        {
+
+            sleepIcon.SetActive(true);
+
             // show icon here for seed
         }
 
@@ -143,6 +161,7 @@ public class PlayerController : MonoBehaviour
         _nearestTeleSpot = null;
 
         interactIcon.SetActive(false);
+        sleepIcon.SetActive(false);
     }
 
     private void FixedUpdate()
