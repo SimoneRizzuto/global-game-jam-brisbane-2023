@@ -174,6 +174,8 @@ public class PlayerController : MonoBehaviour
 
         _isNearTeleSpot = false;
         _nearestTeleSpot = null;
+        
+        isNearDiary = false;
 
         interactIcon.SetActive(false);
         sleepIcon.SetActive(false);
