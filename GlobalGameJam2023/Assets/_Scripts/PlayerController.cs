@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] GameObject interactIcon;
     [SerializeField] GameObject sleepIcon;
-
+    [SerializeField] GameObject caveCarpet;
     public int CurrentPossessedSeeds
     {
         get
@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
 
     private void Interact_performed(InputAction.CallbackContext obj)
     {
+        if (IsTeleporting) return;
         if (isNearDiary)
         {
             diary.Interact();
@@ -115,8 +116,20 @@ public class PlayerController : MonoBehaviour
         {
             planter.NextDay();
         }
-    }
+        UIManager.Instance.FadeTransitionAnimator.SetBool("IsFading", true);
+        IsTeleporting = true;
 
+        
+
+        Invoke(nameof(FadeIn), 1.35f);
+        if(currentDay == 7) { caveCarpet.SetActive(true); }
+
+    }
+    void FadeIn()
+    {
+        IsTeleporting = false;
+        UIManager.Instance.FadeTransitionAnimator.SetBool("IsFading", false);
+    }
     IEnumerator HideSpeech(float t)
     {
          yield return new WaitForSeconds(t);
