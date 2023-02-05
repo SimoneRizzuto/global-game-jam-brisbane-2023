@@ -6933,6 +6933,7 @@ GameObject:
   - component: {fileID: 1866575960}
   - component: {fileID: 1866575961}
   - component: {fileID: 1866575962}
+  - component: {fileID: 1866575963}
   m_Layer: 0
   m_Name: diary
   m_TagString: Diary
@@ -7033,6 +7034,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22711767, y: 0.15891361}
   m_EdgeRadius: 0
+--- !u!114 &1866575963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866575959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1815ed0d9cc6d6f46be40ac71a40b8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeechIndex: 0
+  DaysOld: 0
 --- !u!1 &1909017453
 GameObject:
   m_ObjectHideFlags: 0
@@ -7179,6 +7194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e7309225858c040bb696d1b1c187ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diary: {fileID: 1866575963}
   IsTeleporting: 0
   planters:
   - {fileID: 715859853}

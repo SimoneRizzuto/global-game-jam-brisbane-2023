@@ -24,8 +24,11 @@ public class Diary : MonoBehaviour
     public void Interact()
     {
         Read();
-        
-        if (UIManager.Instance.IsDisplayed == false) { UIManager.Instance.DisplaySpeech(lastEntry); }
+
+        if (UIManager.Instance.IsDisplayed == false)
+        {
+            UIManager.Instance.DisplaySpeech(lastEntry);
+        }
         else UIManager.Instance.HideSpeech();
         
         /*// Plant seed if none in planter

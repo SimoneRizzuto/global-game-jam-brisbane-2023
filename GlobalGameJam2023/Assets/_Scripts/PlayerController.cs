@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     DropSeed nearestSeed;
 
     bool isNearDiary;
+    [SerializeField]
     Diary diary;
     
     bool _isNearTeleSpot = false;
