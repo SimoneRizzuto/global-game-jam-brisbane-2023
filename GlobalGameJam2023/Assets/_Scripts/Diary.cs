@@ -7,23 +7,40 @@ public class Diary : MonoBehaviour
     public int SpeechIndex = 0; 
     public int DaysOld = 0;
 
-    private string lastEntry = "testing 123";
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private string lastEntry = "";
 
-    // Update is called once per frame
-    void Update()
+    private List<string> day1 = new List<string>()
     {
-        
-    }
+
+    };
+    private List<string> day2 = new List<string>()
+    {
+
+    };
+    private List<string> day3 = new List<string>()
+    {
+
+    };
+    private List<string> day4 = new List<string>()
+    {
+
+    };
+    private List<string> day5 = new List<string>()
+    {
+    };
+    private List<string> day7 = new List<string>()
+    {
+
+    };
+    private List<string> day8 = new List<string>()
+    {
+
+    };
+    
 
     public void Interact()
     {
-        Read();
+        
 
         if (UIManager.Instance.IsDisplayed == false)
         {
