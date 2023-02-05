@@ -7,7 +7,7 @@ TagManager:
   - Planter
   - DroppedSeed
   - TeleSpot
-  - Diary
+  - Bed
   layers:
   - Default
   - TransparentFX
