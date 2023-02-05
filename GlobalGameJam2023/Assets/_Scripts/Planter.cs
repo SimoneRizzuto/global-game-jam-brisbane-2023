@@ -119,6 +119,7 @@ public class Planter : MonoBehaviour
     {
         // Set speech string
         bool isDoneTalking = false;
+        player.IsTeleporting = true; //Adrian - you can't run away from them or else they'll [REDACTED] /jk
         switch (DaysOld)
         {
             case 1:
@@ -161,6 +162,7 @@ public class Planter : MonoBehaviour
             UIManager.Instance.HideSpeech();
             areTasksFinished = true;
             IsWatered = true;
+            player.IsTeleporting = false; //we're free!
         }
         else
         {

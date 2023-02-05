@@ -292,7 +292,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpeechIndex: 0
   DaysOld: 0
-  player: {fileID: 2011674503}
 --- !u!212 &50382679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4651,7 +4650,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.15}
+  m_Size: {x: 0.25, y: 0.1}
   m_EdgeRadius: 0
 --- !u!4 &1085012738
 Transform:

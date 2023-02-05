@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     Planter[] planters;
-
     int currentDay = 1;
 
     //corn = 1
@@ -75,14 +74,15 @@ public class PlayerController : MonoBehaviour
 
     private void Interact_performed(InputAction.CallbackContext obj)
     {
-        if (IsTeleporting) return;
         if (isNearDiary)
         {
             diary.Interact();
         }
-        
+
         if (isNearPlanter && nearestPlanter != null)
             nearestPlanter.Interact();
+
+        if (IsTeleporting) return; //allow for diary and planter interaction when 'frozen'
 
         if (isNearSeed && nearestSeed != null)
         {
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
             if (!planter.AreTasksFinished)
             {
                 UIManager.Instance.DisplaySpeech("It is still early!");
-                StartCoroutine(HideSpeech(1.2f));
+                StartCoroutine(UIManager.Instance.HideSpeechTimer(1.2f));
                 return;
             }
         }
@@ -136,11 +136,6 @@ public class PlayerController : MonoBehaviour
     {
         IsTeleporting = false;
         UIManager.Instance.FadeTransitionAnimator.SetBool("IsFading", false);
-    }
-    IEnumerator HideSpeech(float t)
-    {
-         yield return new WaitForSeconds(t);
-         UIManager.Instance.HideSpeech();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -208,12 +203,19 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        Vector2 dir;
+        //Adrian - catch and fix the exception when recompiling (and reloading) scripts during 'gameplay'
+        try
+        {
+         Vector2 dir;
         if (IsTeleporting) { dir = Vector2.zero; }
 
         else
         {
+
             dir = playerInputActions.Player.Move.ReadValue<Vector2>();
+
+
+
             if (Mathf.Abs(dir.x) > 0.05) { dir.x = 1 * Mathf.Sign(dir.x); }
             if (Mathf.Abs(dir.y) > 0.05) { dir.y = 1 * Mathf.Sign(dir.y); }
 
@@ -235,7 +237,14 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetFloat("vertical", dir.y);
 
         transform.position += ((Vector3)dir).normalized * Time.deltaTime;
+        }
+        catch
+        {
+            playerInputActions = new InputActions();
+            playerInputActions.Player.Enable();
 
+            playerInputActions.Player.Interact.performed += Interact_performed;
+        }
     }
 
     public void Teleport(Vector3 destination)

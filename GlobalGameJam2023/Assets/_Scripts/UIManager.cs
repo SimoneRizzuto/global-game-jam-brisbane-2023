@@ -38,6 +38,12 @@ public class UIManager : MonoBehaviour
         SpeechTextBox.SetActive(true);
         IsDisplayed = true;
     }
+    //Adrian - can someone tell me why the f this was in the player controller?
+    public IEnumerator HideSpeechTimer(float t)
+    {
+        yield return new WaitForSeconds(t);
+        UIManager.Instance.HideSpeech();
+    }
 
     public void HideSpeech()
     {
