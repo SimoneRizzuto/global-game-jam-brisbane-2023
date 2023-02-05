@@ -15,26 +15,32 @@ MonoBehaviour:
   StartDay: 1
   Name: Corn
   Day1:
-  - You got me, thx
-  - "You should know a lil something about me, I\u2019m from the comedy clubs of
-    New York where I had all the ears"
-  - "If it\u2019s up to me I\u2019d explore this whole farm like how I explored New
-    York, you never know what you\u2019ll find"
-  - "Everyone was amaized with my genius comedy, I can bless you with that everyday
-    and I\u2019d love the visit"
-  - Hehe
+  - "Hey you must be Leif. I\u2019m corn, if I had a hand I would give yours a shake.
+    But you seem a little shocked that I can talk don\u2019t worry you\u2019re not
+    going crazy"
+  - Or are you
+  - "Just kidding, I'm a bit of a jokester. But you should know a little bit about
+    me I\u2019m a bit of a big shot, I cut my teeth on the best comedy clubs in New
+    York"
+  - "I\u2019ll have you in stitches. But around here everyone is amazed with my comedy
+    genius."
+  - Grandma used to lay riddles on all of us. So how about I lay one on you.
+  - You will find me a place where the tools lay.
   Day2:
-  - Imma corn star
+  - You should probably listen to chilli today although he may be a big ball of fiery
+    anger, he does have those few moments of juicy intelligence
   Day3:
-  - Grandma used to be married, I never knew his name all I knew that he was a Kernel
+  - "Grandma used to be married.I never knew the guy\u2019s name. All I knew that
+    he was a Kernel."
   Day4:
-  - Why was the kernel comedian booed off the stage?...
-  - ...all of his jokes were corny
-  - hahaha, *slaps knee stalk*
+  - Why was the kernel comedian booed off the stage?
+  - All of his jokes were corny.
+  - '*slaps knee stalk*'
   Day5:
   - "I\u2019m thinking of getting a haircut, maybe some Cornrows"
   Day6:
   - "I see you have only planted one of me, I guess I\u2019m a unicorn"
   Day7:
-  - Wow you have really planted a whole field, more ears to listen to my jokes
+  - "Wow you have really planted a whole field, more ears to listen to my jokes.
+    Just wish she could hear my jokes one last time\u2026"
   finalImage: {fileID: 1745363891, guid: 13d258679a0b54c48aa7d2552b1328e8, type: 3}
