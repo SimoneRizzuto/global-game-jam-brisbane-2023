@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     bool isNearSeed = false;
     DropSeed nearestSeed;
 
-    bool isNearDiary;
+    private bool isNearDiary = false;
     [SerializeField]
     Diary diary;
     
@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
         {
             GoToNextDay();
         }
+        
         //if (_isNearTeleSpot && _nearestTeleSpot != null) _nearestTeleSpot.StartTeleport();
     }
     void GoToNextDay() //activate near bed

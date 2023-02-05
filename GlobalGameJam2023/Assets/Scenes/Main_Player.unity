@@ -7048,6 +7048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpeechIndex: 0
   DaysOld: 0
+  player: {fileID: 2011674503}
 --- !u!1 &1909017453
 GameObject:
   m_ObjectHideFlags: 0
@@ -7205,7 +7206,7 @@ MonoBehaviour:
   - {fileID: 1671382355}
   - {fileID: 986586552}
   interactIcon: {fileID: 580459898}
-  sleepIcon: {fileID: 5712913694087274033}
+  sleepIcon: {fileID: 0}
 --- !u!114 &2011674504
 MonoBehaviour:
   m_ObjectHideFlags: 0
