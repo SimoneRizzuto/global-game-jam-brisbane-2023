@@ -116,7 +116,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Diary"))
         {
             isNearDiary = true;
-            
         }
     
         if (collision.gameObject.CompareTag("Planter"))
