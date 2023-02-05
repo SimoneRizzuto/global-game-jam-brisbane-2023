@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     bool _isNearTeleSpot = false;
     TeleSpot _nearestTeleSpot;
 
+    public bool IsTeleporting = false;
 
     [SerializeField]
     Planter[] planters;
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public int CurrentDay { get => currentDay;  }
+    public int CurrentDay { get => currentDay; }
     public bool HintKnow { get => hintKnow; set => hintKnow = value; }
 
     private void Awake()
@@ -72,16 +73,16 @@ public class PlayerController : MonoBehaviour
 
         if (isNearSeed && nearestSeed != null)
         {
-            if(CurrentDay == nearestSeed.ActivationDay && HintKnow)
+            if (CurrentDay == nearestSeed.ActivationDay && HintKnow)
             {
                 currentPossessedSeeds += nearestSeed.SeedCode;
                 nearestSeed.ActivateIcon();
                 nearestSeed.gameObject.SetActive(false);
             }
-          
+
         }
 
-        if (_isNearTeleSpot && _nearestTeleSpot != null) _nearestTeleSpot.StartTeleport();
+        //if (_isNearTeleSpot && _nearestTeleSpot != null) _nearestTeleSpot.StartTeleport();
     }
     void GoToNextDay() //activate near bed
     {
@@ -110,7 +111,7 @@ public class PlayerController : MonoBehaviour
         }
 
         else if (collision.gameObject.CompareTag("DroppedSeed"))
-        {          
+        {
             isNearSeed = true;
             nearestSeed = collision.GetComponent<DropSeed>();
             if (CurrentDay == nearestSeed.ActivationDay && HintKnow)
@@ -125,6 +126,7 @@ public class PlayerController : MonoBehaviour
         {
             _isNearTeleSpot = true;
             _nearestTeleSpot = collision.GetComponent<TeleSpot>();
+            _nearestTeleSpot.StartTeleport();
         }
     }
 
@@ -151,23 +153,31 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        Vector2 dir = playerInputActions.Player.Move.ReadValue<Vector2>();
-        if ( Mathf.Abs(dir.x) > 0.05 ) { dir.x = 1 * Mathf.Sign(dir.x); }
-        if (Mathf.Abs(dir.y) > 0.05) { dir.y = 1 * Mathf.Sign(dir.y); }
+        Vector2 dir;
+        if (IsTeleporting) { dir = Vector2.zero; }
+
+        else
+        {
+            dir = playerInputActions.Player.Move.ReadValue<Vector2>();
+            if (Mathf.Abs(dir.x) > 0.05) { dir.x = 1 * Mathf.Sign(dir.x); }
+            if (Mathf.Abs(dir.y) > 0.05) { dir.y = 1 * Mathf.Sign(dir.y); }
 
 
-        if (dir.x < 0)
-            facing = 0;
-        else if (dir.x > 0)
-            facing = 1;
-        else if (dir.y > 0)
-            facing = 2;
-        else if (dir.y < 0)
-            facing = 3;
+            if (dir.x < 0)
+                facing = 0;
+            else if (dir.x > 0)
+                facing = 1;
+            else if (dir.y > 0)
+                facing = 2;
+            else if (dir.y < 0)
+                facing = 3;
+            playerAnimator.SetInteger("direction", facing);
+
+
+        }
 
         playerAnimator.SetFloat("horizontal", dir.x);
         playerAnimator.SetFloat("vertical", dir.y);
-        playerAnimator.SetInteger("direction", facing);
 
         transform.position += ((Vector3)dir).normalized * Time.deltaTime;
 
