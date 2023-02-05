@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -21,6 +22,9 @@ public class PlayerController : MonoBehaviour
     bool isNearSeed = false;
     DropSeed nearestSeed;
 
+    bool isNearDiary;
+    Diary diary;
+    
     bool _isNearTeleSpot = false;
     TeleSpot _nearestTeleSpot;
 
@@ -63,11 +67,16 @@ public class PlayerController : MonoBehaviour
         playerInputActions.Player.Enable();
         playerAnimator = GetComponent<Animator>();
 
-        playerInputActions.Player.Interact.performed += Interact_performed; ;
+        playerInputActions.Player.Interact.performed += Interact_performed;
     }
 
     private void Interact_performed(InputAction.CallbackContext obj)
     {
+        if (isNearDiary)
+        {
+            diary.Interact();
+        }
+        
         if (isNearPlanter && nearestPlanter != null)
             nearestPlanter.Interact();
 
@@ -104,6 +113,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Diary"))
+        {
+            isNearDiary = true;
+            
+        }
+    
         if (collision.gameObject.CompareTag("Planter"))
         {
             isNearPlanter = true;
