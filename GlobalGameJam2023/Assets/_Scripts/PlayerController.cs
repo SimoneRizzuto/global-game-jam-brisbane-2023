@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject interactIcon;
     [SerializeField] GameObject sleepIcon;
     [SerializeField] GameObject caveCarpet;
+    [SerializeField] GameObject[] seedBags;
     public int CurrentPossessedSeeds
     {
         get
@@ -89,7 +90,6 @@ public class PlayerController : MonoBehaviour
             {
                 currentPossessedSeeds += nearestSeed.SeedCode;
                 nearestSeed.ActivateIcon();
-                nearestSeed.gameObject.SetActive(false);
             }
 
         }
@@ -123,7 +123,13 @@ public class PlayerController : MonoBehaviour
         
 
         Invoke(nameof(FadeIn), 1.35f);
-        if(currentDay == 7) { caveCarpet.SetActive(true); }
+        if (currentDay == 1) { seedBags[0].SetActive(true); }
+        if (currentDay == 2) { seedBags[1].SetActive(true); }
+        if (currentDay == 3) { seedBags[2].SetActive(true); }
+        if (currentDay == 4) { seedBags[3].SetActive(true); }
+        if (currentDay == 5) { seedBags[4].SetActive(true); }
+        if (currentDay == 6) { seedBags[5].SetActive(true); }
+        if (currentDay == 7) { caveCarpet.SetActive(true); }
 
     }
     void FadeIn()
@@ -198,7 +204,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        if (Input.GetKeyDown(KeyCode.Space)) GoToNextDay();
     }
 
     void Move()
