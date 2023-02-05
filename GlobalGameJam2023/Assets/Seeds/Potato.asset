@@ -19,17 +19,21 @@ MonoBehaviour:
   Day3: []
   Day4: []
   Day5:
-  - I see you have met my little sister, has she annoyed you enough yet
+  - I see you have met my little sister, has she annoyed you enough yet?
   - "But she\u2019s a good kid, a bit too high energy for me at times though. She
     takes a lot of her personality from our uncle."
-  - "I don\u2019t think she told you where we\u2019re from but we were actually from
-    two different places as Tomato is from Spain and I am from Ireland"
+  - "I don\u2019t think she told you where we\u2019re from, we\u2019re from two different
+    places. Tomato is from Spain and I am from Ireland."
+  - "Ha you\u2019ve made it to the last riddle."
+  - I am hidden at the end of area where light barely reaches.
   Day6:
-  - "I see you have met our uncle, he\u2019s a bit fiery but he\u2019s always been
-    there for use although sometimes he\u2019s too hot for us"
-  - "Yeah chilli is great but I know you\u2019re wondering that we\u2019re not from
-    south America we\u2019re from Europe, he gets his Chilean descent from his mother"
+  - "I see you have met our uncle, he\u2019s a bit fiery, but he\u2019s always been
+    there for us."
+  - He gets his Chilean descent from his mother. Chilli is great, but between us,
+    Europe is a much nicer place.
+  - "That\u2019s where we\u2019re from, that might be why anyway."
   Day7:
   - "Tomato and I\u2019s da died when we were young, although she thinks he died
-    in a kitchen accident he was actually a drunk who fell down a well"
+    in a kitchen accident, he was actually a drunk who fell down a well."
+  - "Please\u2026 don\u2019t tell her."
   finalImage: {fileID: -156423061, guid: 13d258679a0b54c48aa7d2552b1328e8, type: 3}

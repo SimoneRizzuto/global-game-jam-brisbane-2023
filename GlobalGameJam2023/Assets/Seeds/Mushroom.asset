@@ -20,9 +20,12 @@ MonoBehaviour:
   Day4: []
   Day5: []
   Day6:
-  - You all would bow to meeeee and under my rule you all will know how much of a
-    fungi that I am
+  - "Welcome to my throne room mwahahaha. This is where I\u2019ll rule the world.
+    Where everyone will bow to meeee"
+  - "I won\u2019t be like the dictators of the past. I\u2019ll show the world that
+    I\u2019m really a fungi"
   Day7:
   - "I you are as nice to me as your grandma was Leif when I rule to the world I\u2019ll
-    make sure your safe and taken care of"
+    make sure your safe and taken care of. Even more so than I what Pumpkin said
+    he will"
   finalImage: {fileID: 1646385652, guid: 13d258679a0b54c48aa7d2552b1328e8, type: 3}
