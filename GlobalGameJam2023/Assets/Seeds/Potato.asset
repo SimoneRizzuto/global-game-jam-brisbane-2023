@@ -14,11 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartDay: 5
   Name: 
-  Day1: []
-  Day2: []
-  Day3: []
-  Day4: []
-  Day5:
+  Day1:
   - I see you have met my little sister, has she annoyed you enough yet?
   - "But she\u2019s a good kid, a bit too high energy for me at times though. She
     takes a lot of her personality from our uncle."
@@ -26,14 +22,18 @@ MonoBehaviour:
     places. Tomato is from Spain and I am from Ireland."
   - "Ha you\u2019ve made it to the last riddle."
   - I am hidden at the end of area where light barely reaches.
-  Day6:
+  Day2:
   - "I see you have met our uncle, he\u2019s a bit fiery, but he\u2019s always been
     there for us."
   - He gets his Chilean descent from his mother. Chilli is great, but between us,
     Europe is a much nicer place.
   - "That\u2019s where we\u2019re from, that might be why anyway."
-  Day7:
+  Day3:
   - "Tomato and I\u2019s da died when we were young, although she thinks he died
     in a kitchen accident, he was actually a drunk who fell down a well."
   - "Please\u2026 don\u2019t tell her."
+  Day4: []
+  Day5: []
+  Day6: []
+  Day7: []
   finalImage: {fileID: -156423061, guid: 13d258679a0b54c48aa7d2552b1328e8, type: 3}

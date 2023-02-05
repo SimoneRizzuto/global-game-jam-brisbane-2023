@@ -78,7 +78,7 @@ public class Diary : MonoBehaviour
                 return;
             }
         }
-        else if (player.CurrentDay == 2)
+        else if (player.CurrentDay < 2)
         {
             if (SpeechIndex == day2.Count)
             {
@@ -87,7 +87,7 @@ public class Diary : MonoBehaviour
                 return;
             }
         }
-        else if (player.CurrentDay == 3)
+        else if (player.CurrentDay < 3)
         {
             if (SpeechIndex == day3.Count)
             {
@@ -96,7 +96,7 @@ public class Diary : MonoBehaviour
                 return;
             }
         }
-        else if (player.CurrentDay == 4)
+        else if (player.CurrentDay < 4)
         {
             if (SpeechIndex == day4.Count)
             {
@@ -105,7 +105,7 @@ public class Diary : MonoBehaviour
                 return;
             }
         }
-        else if (player.CurrentDay == 5)
+        else if (player.CurrentDay < 5)
         {
             if (SpeechIndex == day5.Count)
             {
@@ -114,7 +114,7 @@ public class Diary : MonoBehaviour
                 return;
             }
         }
-        else if (player.CurrentDay == 6)
+        else if (player.CurrentDay < 6)
         {
             if (SpeechIndex == day6.Count)
             {
@@ -123,7 +123,7 @@ public class Diary : MonoBehaviour
                 return;
             }
         }
-        else if (player.CurrentDay == 7)
+        else if (player.CurrentDay < 7)
         {
             if (SpeechIndex == day7.Count)
             {
@@ -132,7 +132,7 @@ public class Diary : MonoBehaviour
                 return;
             }
         }
-        else if (player.CurrentDay == 8)
+        else if (player.CurrentDay < 8)
         {
             if (SpeechIndex == day8.Count)
             {
