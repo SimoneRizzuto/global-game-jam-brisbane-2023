@@ -112,7 +112,7 @@ public class Planter : MonoBehaviour
     void Plant(Seed seed)
     {
         Seed = seed;
-        FindObjectOfType<AudioManager>().Play("Plant Seed");
+        FindObjectOfType<AudioManager>().Play("Plant Seeds");
         SpeechIndex = 0;
     }
 

@@ -15,6 +15,7 @@ public class DropSeed : MonoBehaviour
     public void ActivateIcon()
     {
         GameManager.Instance.PlayerController.IsTeleporting = true;
+        FindObjectOfType<AudioManager>().Play("Pickup Seeds");
         planter.ShowInteractIcon();
         UIManager.Instance.DisplaySpeech( string.Format("You acquired some \"{0}\" seeds",seedName));
         StartCoroutine(HideSpeech(1.2f));
