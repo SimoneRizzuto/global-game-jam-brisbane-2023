@@ -112,6 +112,7 @@ public class Planter : MonoBehaviour
     void Plant(Seed seed)
     {
         Seed = seed;
+        FindObjectOfType<AudioManager>().Play("Plant Seed");
         SpeechIndex = 0;
     }
 
@@ -160,6 +161,7 @@ public class Planter : MonoBehaviour
         {
             UIManager.Instance.HideSpeech();
             areTasksFinished = true;
+            FindObjectOfType<AudioManager>().Play("Water Plant");
             IsWatered = true;
             player.IsTeleporting = false; //we're free!
         }

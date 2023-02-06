@@ -11,9 +11,8 @@ using System.Linq;
 /// <summary>
 /// Author/Editors: Adrian Barrett
 /// 
-/// Description: This script handles the settings/option menu in the main menu scene. Resolution (at 60hz), quality, fullscreen. 
+/// Description: This script handles the settings/option menu in the main menu scene. Resolution (at 60hz), quality, fullscreen and now sound (volume). 
 /// 
-/// No sound currently so its not needed.
 /// </summary>
 public class SettingsMenu : MonoBehaviour 
 {
