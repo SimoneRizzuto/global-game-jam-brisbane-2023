@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.UI;
 using UnityEngine;
 
 //Adrian - I've fixed up and cleaned up this script for the diary.
@@ -8,7 +11,7 @@ public class Diary : MonoBehaviour
 {
     public int SpeechIndex = 0; 
     public int DaysOld = 0;
-    
+
     private string lastEntry = "";
     List<string>[] Entries = new List<string>[] {day1, day2, day3, day4, day5, day6, day7, day8};
 
@@ -66,6 +69,28 @@ public class Diary : MonoBehaviour
             "Thinking about all the times that I came here as a kid and never realised all the plants talked.",
             "Although it now makes sense with all the weird sounds that I heard."
         };
+
+    private GameObject diaryIcon;
+    
+    private void Start()
+    {
+        diaryIcon = GameObject.Find("DiaryInteractIcon");
+    }
+
+    private void Update()
+    {
+        Planter[] planters = (Planter[])FindObjectsOfType(typeof(Planter));
+        foreach (var planter in planters)
+        {
+            if (!planter.AreTasksFinished)
+            {
+                diaryIcon.SetActive(false);
+                return;
+            }
+        }
+        
+        diaryIcon.SetActive(true);
+    }
 
     public void Interact()
     {
