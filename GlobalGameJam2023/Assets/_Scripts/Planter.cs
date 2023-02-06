@@ -73,8 +73,8 @@ public class Planter : MonoBehaviour
             else UIManager.Instance.HideSpeech();
         }
 
-        // Display or hide normal speech if not watered
-        else Talk();
+        // Display or hide normal speech if not watered (Adrian - and not a limp seed)
+        else if (DaysOld != 0) Talk();
 
         ShowInteractIcon();
     }
@@ -155,7 +155,6 @@ public class Planter : MonoBehaviour
                 break;
         }
         lastSpeech = speech;
-        if (DaysOld == 0) { return; }
         // Display or hide speech
         if (isDoneTalking)
         {
