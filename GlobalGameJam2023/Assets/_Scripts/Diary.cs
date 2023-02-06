@@ -13,6 +13,7 @@ public class Diary : MonoBehaviour
     public int DaysOld = 0;
 
     private string lastEntry = "";
+    Planter[] planters;
     List<string>[] Entries = new List<string>[] {day1, day2, day3, day4, day5, day6, day7, day8};
 
     private static List<string> day1 = new List<string>()
@@ -74,12 +75,12 @@ public class Diary : MonoBehaviour
     
     private void Start()
     {
+        planters = (Planter[])FindObjectsOfType(typeof(Planter)); //so we're not getting them every single tick
         diaryIcon = GameObject.Find("DiaryInteractIcon");
     }
 
     private void Update()
     {
-        Planter[] planters = (Planter[])FindObjectsOfType(typeof(Planter));
         foreach (var planter in planters)
         {
             if (!planter.AreTasksFinished)
@@ -94,7 +95,6 @@ public class Diary : MonoBehaviour
 
     public void Interact()
     {
-        Planter[] planters = (Planter[])FindObjectsOfType(typeof(Planter));
         foreach (var planter in planters)
         {
             if (!planter.AreTasksFinished)
