@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
 using System.Text;
@@ -17,6 +18,7 @@ using System.Linq;
 public class SettingsMenu : MonoBehaviour 
 {
     //Class Variables
+    public AudioMixer audioMixer;
     public TMP_Dropdown resolutionDropdown;
     public TMP_Dropdown qualityDropdown;
     public Toggle fullScreenToggle;
@@ -49,6 +51,10 @@ public class SettingsMenu : MonoBehaviour
         LoadSettings(currentResolutionIndex);
     }
     //Custom Public Methods 
+    public void SetVolume (float volume)
+    {
+        audioMixer.SetFloat("Volume", Mathf.Log(volume)*20);
+    }
     public void SetResolution (int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
@@ -64,30 +70,26 @@ public class SettingsMenu : MonoBehaviour
     }
     public void SaveSettings()
     {
-        PlayerPrefs.SetInt("QualitySettingPreference",
-                   qualityDropdown.value);
-        PlayerPrefs.SetInt("ResolutionPreference",
-                   resolutionDropdown.value);
-        PlayerPrefs.SetInt("FullscreenPreference",
-                   Convert.ToInt32(Screen.fullScreen));
+        float volume;   
+        PlayerPrefs.SetInt("QualitySettingPreference", qualityDropdown.value);
+        PlayerPrefs.SetInt("ResolutionPreference", resolutionDropdown.value);
+        PlayerPrefs.SetInt("FullscreenPreference", Convert.ToInt32(Screen.fullScreen));
+        bool result = audioMixer.GetFloat("volume", out volume);
+        if (result)
+        {
+            PlayerPrefs.SetFloat("VolumePreference", volume);
+        }
     }
     public void LoadSettings(int currentResolutionIndex)
     {
-        if (PlayerPrefs.HasKey("QualitySettingPreference"))
-            qualityDropdown.value =
-                         PlayerPrefs.GetInt("QualitySettingPreference");
-        else
-            qualityDropdown.value = 3;
-        if (PlayerPrefs.HasKey("ResolutionPreference"))
-            resolutionDropdown.value =
-                         PlayerPrefs.GetInt("ResolutionPreference");
-        else
-            resolutionDropdown.value = currentResolutionIndex;
-        if (PlayerPrefs.HasKey("FullscreenPreference"))
-            Screen.fullScreen =
-            Convert.ToBoolean(PlayerPrefs.GetInt("FullscreenPreference"));
-        else
-            Screen.fullScreen = true;
+        if (PlayerPrefs.HasKey("QualitySettingPreference")) qualityDropdown.value = PlayerPrefs.GetInt("QualitySettingPreference");
+        else qualityDropdown.value = 3;
+        if (PlayerPrefs.HasKey("ResolutionPreference")) resolutionDropdown.value = PlayerPrefs.GetInt("ResolutionPreference");
+        else resolutionDropdown.value = currentResolutionIndex;
+        if (PlayerPrefs.HasKey("FullscreenPreference")) Screen.fullScreen = Convert.ToBoolean(PlayerPrefs.GetInt("FullscreenPreference"));
+        else Screen.fullScreen = true;
+        if (PlayerPrefs.HasKey("VolumePreference")) audioMixer.SetFloat("volume", PlayerPrefs.GetFloat("VolumePreference"));
+        else audioMixer.SetFloat("volume", -40f);
     }
     //Custom Private Methods 
 

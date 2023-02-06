@@ -979,7 +979,7 @@ AudioSource:
   m_GameObject: {fileID: 148634094}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 553f9684724acfa41bd5a2627d5977a2, type: 2}
   m_audioClip: {fileID: 8300000, guid: e040c18bd69c642509457a29c14fc8bb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2380,7 +2380,7 @@ AudioSource:
   m_GameObject: {fileID: 466419437}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 553f9684724acfa41bd5a2627d5977a2, type: 2}
   m_audioClip: {fileID: 8300000, guid: 25d4f68e179d947ff8bfcbd88d328a79, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -8127,7 +8127,7 @@ AudioSource:
   m_GameObject: {fileID: 1821823717}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 553f9684724acfa41bd5a2627d5977a2, type: 2}
   m_audioClip: {fileID: 8300000, guid: 72b21c9a36fa9490fa623e656386e012, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -8560,6 +8560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
@@ -8762,7 +8763,7 @@ MonoBehaviour:
   m_Camera: {fileID: 0}
 --- !u!95 &2011674505
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8779,7 +8780,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!50 &2011674506
 Rigidbody2D:
   serializedVersion: 4
