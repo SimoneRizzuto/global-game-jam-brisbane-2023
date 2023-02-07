@@ -120,8 +120,6 @@ public class PlayerController : MonoBehaviour
         UIManager.Instance.FadeTransitionAnimator.SetBool("IsFading", true);
         IsTeleporting = true;
 
-        
-
         Invoke(nameof(FadeIn), 1.35f);
         if (currentDay == 1) { seedBags[0].SetActive(true); }
         if (currentDay == 2) { seedBags[1].SetActive(true); }
@@ -130,7 +128,7 @@ public class PlayerController : MonoBehaviour
         if (currentDay == 5) { seedBags[4].SetActive(true); }
         if (currentDay == 6) { seedBags[5].SetActive(true); }
         if (currentDay == 7) { caveCarpet.SetActive(true); }
-
+        if (currentDay == 8) UIManager.Instance.Credits.SetActive(true); // Activate credits on last day
     }
     void FadeIn()
     {

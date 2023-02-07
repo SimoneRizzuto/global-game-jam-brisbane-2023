@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject SpeechTextBox;
     public TMP_Text SpeechText;
     public Animator FadeTransitionAnimator;
+    public GameObject Credits;
 
     public bool IsDisplayed {get; private set;}
 
@@ -38,6 +39,7 @@ public class UIManager : MonoBehaviour
         SpeechTextBox.SetActive(true);
         IsDisplayed = true;
     }
+
     //Adrian - can someone tell me why the f this was in the player controller?
     public IEnumerator HideSpeechTimer(float t)
     {
@@ -49,7 +51,5 @@ public class UIManager : MonoBehaviour
     {
         SpeechTextBox.SetActive(false);
         IsDisplayed = false;
-    }
-
-    
+    } 
 }
