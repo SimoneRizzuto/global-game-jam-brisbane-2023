@@ -4574,27 +4574,28 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'James Ellem - Design
+  m_text: 'Simone Rizzuto (@Simorico) - Design and Art
 
 
-    Will ''Gamer Goose'' Hughes - Design and Programming
+    Ye Gaung Kyaw - Programming
 
 
-    Simone
-    Rizzuto (@Simorico) - Design and Art
+    Kaelin
+    Stemmler - Music and SFX
 
 
-    Kaelin Stemmler - Music and SFX
+    James Ellem - Design
 
 
-    Ye
-    Gaung Kyaw - Programming
+    Will ''Gamer Goose''
+    Hughes - Design and Programming
 
 
-    Lasercar - Programming
+    Adrian B - Programming
 
 
-    Doge - Design
+    Toni ''Doge''
+    - Design
 
 
 
@@ -6502,7 +6503,7 @@ MonoBehaviour:
   m_text: 'Thank you for playing
 
 
-    Little Leif'
+    Little Lief'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d26122eb8d5af2c419c6a7da01344d5e, type: 2}
   m_sharedMaterial: {fileID: 4355608816238297153, guid: d26122eb8d5af2c419c6a7da01344d5e, type: 2}
