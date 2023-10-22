@@ -3,7 +3,7 @@ Repo for Global Game Jam Brisbane 2023.
 
 Credits:
 - @Simorico -> Simone Rizzuto
-- 
+- @HikariAkio -> Ye Gaung Kyaw
 - 
 - 
 - 
